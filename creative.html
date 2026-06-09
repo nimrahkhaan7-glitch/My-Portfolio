@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Creative Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b1120;
+            color: #f8fafc;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .back-link {
+            display: inline-block;
+            color: #a78bfa;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        header h1 {
+            font-size: 2.6rem;
+            color: #38bdf8;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .category-title {
+            font-size: 1.6rem;
+            color: #f43f5e;
+            margin: 45px 0 20px 0;
+            border-bottom: 2px solid #1e293b;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .portfolio-item {
+            background-color: #111827;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #1f2937;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-6px);
+            border-color: #3b82f6;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+        .portfolio-info {
+            padding: 24px;
+            background: linear-gradient(to bottom, #111827, #0f172a);
+        }
+        .portfolio-info h3 {
+            font-size: 1.25rem;
+            color: #f8fafc;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .portfolio-info p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 640px) {
+            header h1 { font-size: 2rem; }
+            body { padding: 20px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+
+        <header>
+            <h1>My Creative Portfolio</h1>
+            <p>A showcase of professional digital marketing assets, brand designs, and campaign visuals.</p>
+        </header>
+
+        <!-- Category 1: Fit Jacket -->
+        <div class="category-title">Fit Jacket (Fashion / E-Commerce)</div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="fitjacket-purple-jacket.jpg" alt="Fit Jacket Purple Collection">
+                <div class="portfolio-info">
+                    <h3>Descendants Mal Purple Leather Jacket</h3>
+                    <p>Clean promotional visual highlighting thematic movie-inspired fashion merchandise with clear visual hierarchy.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="fitjacket-fashion-collection.png" alt="Fit Jacket Collection Banner">
+                <div class="portfolio-info">
+                    <h3>Brand Fashion Collection</h3>
+                    <p>Minimalistic and elegant social media banner emphasizing brand identity and a modern aesthetic layout.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="fitjacket-blacklist-james-spader.jpg" alt="Fit Jacket Blacklist Theme">
+                <div class="portfolio-info">
+                    <h3>The Blacklist James Spader Promo</h3>
+                    <p>High-impact thematic promotional card targeted towards pop-culture enthusiasts and tailored apparel lines.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 2: Grand Interiors -->
+        <div class="category-title">Grand Interiors (Flooring & Carpets)</div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="grand-interiors-flooring-promo.jpg" alt="Grand Interiors Promo">
+                <div class="portfolio-info">
+                    <h3>Luxury Flooring Showcase</h3>
+                    <p>A sleek corporate design highlighting premium carpet textures and interior transformation options.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="grand-interiors-flooring-before-after.jpg" alt="Grand Interiors Before After">
+                <div class="portfolio-info">
+                    <h3>Before / After Transformation</h3>
+                    <p>A balanced split layout template displaying practical results and direct commercial value for clients.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 3: Get Smart Gym -->
+        <div class="category-title">Get Smart Gym (Fitness Branding)</div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="getsmartgym-mothers-day-offer.jpg" alt="Get Smart Gym Mothers Day">
+                <div class="portfolio-info">
+                    <h3>Mother's Day Campaign</h3>
+                    <p>Vibrant fitness marketing creative designed to drive high engagement for local promotional events.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="getsmartgym-brand-banner.png" alt="Get Smart Gym Brand Banner">
+                <div class="portfolio-info">
+                    <h3>Gym Brand Banner</h3>
+                    <p>Bold typography combined with high-energy composition to represent professional fitness environments.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 4: Event Designs -->
+        <div class="category-title">Community & Special Events</div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="queer-games-night-sample.png" alt="Queer Games Night">
+                <div class="portfolio-info">
+                    <h3>Queer Games Night</h3>
+                    <p>A clean, premium night-event template featuring striking neon lighting styles blended with customized brand theme elements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
