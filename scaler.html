@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Scaler • Nimra Khan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body {
+            background-color: #05070F;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 24px 16px;
+        }
+        .portfolio-container {
+            width: 100%;
+            max-width: 390px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .back-btn {
+            color: #A78BFA;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .subtitle {
+            color: #9CA3AF;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #C084FC;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .card {
+            background: linear-gradient(145deg, #0F1322, #070A14);
+            border: 1px solid #1F2937;
+            border-radius: 20px;
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .card p {
+            font-size: 0.92rem;
+            color: #9CA3AF;
+            line-height: 1.6;
+        }
+        .build-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .build-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 16px;
+        }
+        .build-item strong {
+            color: #C084FC;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .build-item span {
+            font-size: 0.88rem;
+            color: #9CA3AF;
+            line-height: 1.5;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+        
+        <div>
+            <h1>Operational Architecture</h1>
+            <p class="subtitle">Standardizing content systems for long-term independence.</p>
+        </div>
+
+        <!-- Block 1 -->
+        <div>
+            <h2 class="section-title">Systems Over Content</h2>
+            <div class="card" style="margin-top: 10px;">
+                <p>
+                    Making one-off posts is not a long-term plan. I specialize in building "Content Operating Systems" that let brands automate logistics while keeping high-quality authentic communication.
+                </p>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div>
+            <h2 class="section-title">What I Build</h2>
+            <div class="build-list" style="margin-top: 10px;">
+                <div class="build-item">
+                    <strong>Workflow Pipelines</strong>
+                    <span>I structure content production from idea to distribution, removing operational friction entirely.</span>
+                </div>
+                <div class="build-item">
+                    <strong>Search Visibility Blueprints</strong>
+                    <span>I create SEO structures that turn your digital assets into long-term traffic sources and organic growth engines.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
