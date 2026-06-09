@@ -25,7 +25,7 @@
             max-width: 390px;
             display: flex;
             flex-direction: column;
-            gap: 28px;
+            gap: 24px;
         }
         /* Top Header Section */
         .top-header {
@@ -85,45 +85,62 @@
             color: #A78BFA;
             letter-spacing: 0.5px;
         }
-        /* Navigation Grid */
-        .nav-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr) auto;
-            gap: 8px;
-            align-items: center;
+        
+        /* Balanced Navigation Section */
+        .nav-section {
             width: 100%;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding-bottom: 16px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        /* 4-Column Grid for Links */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4px;
+            width: 100%;
+            text-align: center;
         }
         .nav-item {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #9CA3AF;
             text-decoration: none;
             font-weight: 500;
             line-height: 1.3;
-            text-align: left;
             transition: color 0.2s;
         }
         .nav-item:hover {
             color: #FFFFFF;
         }
+        /* Centered & Beautiful Wide Connect Button */
+        .connect-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
         .connect-btn {
             background-color: rgba(46, 16, 101, 0.4);
             border: 1px solid #5B21B6;
             color: #E9D5FF;
-            padding: 10px 14px;
-            border-radius: 12px;
-            font-size: 0.75rem;
+            padding: 12px;
+            border-radius: 14px;
+            font-size: 0.8rem;
             font-weight: 600;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 6px;
-            transition: background 0.2s;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            transition: background 0.2s, transform 0.2s;
         }
         .connect-btn:hover {
             background-color: rgba(91, 33, 182, 0.6);
+            transform: translateY(-1px);
         }
+
         /* Main Portfolio Card */
         .card {
             background: linear-gradient(145deg, #0F1322, #070A14);
@@ -197,16 +214,23 @@
             </div>
         </div>
 
-        <!-- Navigation Grid (Now Fully Connected) -->
-        <div class="nav-grid">
-            <a href="pitch.html" class="nav-item">Pitch<br>Slider</a>
-            <a href="work.html" class="nav-item">My<br>Works</a>
-            <a href="creative.html" class="nav-item">Creative<br>Portfolio</a>
-            <a href="scaler.html" class="nav-item">Chapter<br>Scaler</a>
-            <a href="connect.html" class="connect-btn">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                Quick Connect
-            </a>
+        <!-- Optimized Navigation Structure -->
+        <div class="nav-section">
+            <!-- 4 Grid Links -->
+            <div class="nav-grid">
+                <a href="pitch.html" class="nav-item">Pitch<br>Slider</a>
+                <a href="work.html" class="nav-item">My<br>Works</a>
+                <a href="creative.html" class="nav-item">Creativity</a>
+                <a href="scaler.html" class="nav-item">Chapter<br>Scaler</a>
+            </div>
+            
+            <!-- Quick Connect Centered & Long Block -->
+            <div class="connect-wrapper">
+                <a href="connect.html" class="connect-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    Quick Connect
+                </a>
+            </div>
         </div>
 
         <!-- Main Content Card -->
