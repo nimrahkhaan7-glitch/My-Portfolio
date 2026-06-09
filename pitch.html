@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Slider • Nimra Khan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body {
+            background-color: #05070F;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 24px 16px;
+        }
+        .portfolio-container {
+            width: 100%;
+            max-width: 390px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .back-btn {
+            color: #A78BFA;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .subtitle {
+            color: #9CA3AF;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #C084FC;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .card {
+            background: linear-gradient(145deg, #0F1322, #070A14);
+            border: 1px solid #1F2937;
+            border-radius: 20px;
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .card p {
+            font-size: 0.92rem;
+            color: #9CA3AF;
+            line-height: 1.6;
+        }
+        .framework-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .framework-item {
+            border-left: 2px solid #6D28D9;
+            padding-left: 12px;
+        }
+        .framework-item strong {
+            color: #FFFFFF;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .framework-item span {
+            font-size: 0.88rem;
+            color: #9CA3AF;
+            line-height: 1.5;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+        
+        <div>
+            <h1>Growth Strategy & Brand Matrix</h1>
+            <p class="subtitle">How I scale visibility without shortcuts.</p>
+        </div>
+
+        <!-- Block 1 -->
+        <div>
+            <h2 class="section-title">The Core Philosophy</h2>
+            <div class="card" style="margin-top: 10px;">
+                <p>
+                    I believe that sustainable digital growth does not come from automated hacks or spammy tricks. It comes from doing market research understanding what the audience wants and building great visual identity assets that grab attention.
+                </p>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div>
+            <h2 class="section-title">Operational Framework</h2>
+            <div class="card" style="margin-top: 10px;">
+                <div class="framework-list">
+                    <div class="framework-item">
+                        <strong>Audit & Map</strong>
+                        <span>I take a look at how your existing assets are performing and find gaps where people are searching for things.</span>
+                    </div>
+                    <div class="framework-item">
+                        <strong>Refine</strong>
+                        <span>I launch clean human-designed social layouts and strong SEO architectures.</span>
+                    </div>
+                    <div class="framework-item">
+                        <strong>Scale</strong>
+                        <span>I set up content delivery systems so your team can work smoothly.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
