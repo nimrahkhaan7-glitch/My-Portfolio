@@ -3,225 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nimra Khan • Visual Systems Portfolio</title>
+    <title>Digital Marketing & Design Portfolio</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background-color: #05070F;
-            color: #FFFFFF;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            padding: 24px 16px;
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 40px 20px;
         }
-        .portfolio-container {
-            width: 100%;
-            max-width: 390px;
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
         }
-        /* Top Header Section */
-        .top-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 100%;
+        header {
+            text-align: center;
+            margin-bottom: 50px;
         }
-        .profile-block {
-            display: flex;
-            gap: 12px;
-            align-items: center;
+        header h1 {
+            font-size: 2.5rem;
+            color: #38bdf8;
+            margin-bottom: 10px;
         }
-        .avatar {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #A855F7, #3B82F6);
-            border-radius: 12px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 700;
+        header p {
+            color: #94a3b8;
             font-size: 1.1rem;
-            letter-spacing: -0.5px;
-            color: #FFFFFF;
-            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
         }
-        .profile-text .name {
-            font-size: 1.25rem;
-            font-weight: 700;
-            line-height: 1.2;
-            color: #FFFFFF;
+        .category-title {
+            font-size: 1.8rem;
+            color: #f43f5e;
+            margin: 40px 0 20px 0;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 8px;
         }
-        .profile-text .exp {
-            font-size: 0.75rem;
-            color: #9CA3AF;
-            margin-top: 4px;
-        }
-        .large-badge {
-            border: 1px solid rgba(168, 85, 247, 0.4);
-            background: rgba(168, 85, 247, 0.05);
-            border-radius: 99px;
-            padding: 8px 16px;
-            text-align: left;
-            max-width: 160px;
-        }
-        .large-badge .line1 {
-            font-size: 0.6rem;
-            font-weight: 700;
-            color: #C084FC;
-            letter-spacing: 0.5px;
-            margin-bottom: 2px;
-        }
-        .large-badge .line2 {
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: #A78BFA;
-            letter-spacing: 0.5px;
-        }
-        /* Navigation Grid */
-        .nav-grid {
+        .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr) auto;
-            gap: 8px;
-            align-items: center;
-            width: 100%;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding-bottom: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
-        .nav-item {
-            font-size: 0.8rem;
-            color: #9CA3AF;
-            text-decoration: none;
-            font-weight: 500;
-            line-height: 1.3;
-            text-align: left;
-            transition: color 0.2s;
-        }
-        .nav-item:hover {
-            color: #FFFFFF;
-        }
-        .connect-btn {
-            background-color: rgba(46, 16, 101, 0.4);
-            border: 1px solid #5B21B6;
-            color: #E9D5FF;
-            padding: 10px 14px;
+        .portfolio-item {
+            background-color: #1e293b;
             border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: background 0.2s;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        .connect-btn:hover {
-            background-color: rgba(91, 33, 182, 0.6);
+        .portfolio-item:hover {
+            transform: translateY(-5px);
         }
-        /* Main Portfolio Card */
-        .card {
-            background: linear-gradient(145deg, #0F1322, #070A14);
-            border: 1px solid #1F2937;
-            border-radius: 28px;
+        .portfolio-item img {
             width: 100%;
-            padding: 32px 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            height: 350px;
+            object-fit: cover;
+            display: block;
         }
-        .badge-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            margin-bottom: 24px;
+        .portfolio-info {
+            padding: 20px;
         }
-        .badge {
-            font-size: 0.68rem;
-            font-weight: 700;
-            padding: 6px 16px;
-            border-radius: 99px;
-            letter-spacing: 0.5px;
-            display: inline-block;
+        .portfolio-info h3 {
+            font-size: 1.3rem;
+            color: #f8fafc;
+            margin-bottom: 8px;
         }
-        .badge-purple {
-            background-color: rgba(109, 40, 217, 0.2);
-            color: #C084FC;
-            border: 1px solid #6D28D9;
-        }
-        .badge-pink {
-            background-color: rgba(157, 23, 77, 0.2);
-            color: #F472B6;
-            border: 1px solid #9D174D;
-        }
-        .main-heading {
-            font-size: 1.75rem;
-            font-weight: 700;
-            line-height: 1.25;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
-            color: #FFFFFF;
-        }
-        .body-text {
-            font-size: 0.92rem;
-            color: #9CA3AF;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-        .highlight-text {
-            color: #C084FC;
-            font-weight: 600;
+        .portfolio-info p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-    <div class="portfolio-container">
-        
-        <!-- Top Header Block -->
-        <div class="top-header">
-            <div class="profile-block">
-                <div class="avatar">NK</div>
-                <div class="profile-text">
-                    <h1 class="name">Nimra<br>Khan</h1>
-                    <p class="exp">6+ Years Exp • Design, SMM & Scalable Systems</p>
+    <div class="container">
+        <header>
+            <h1>My Creative Portfolio</h1>
+            <p>A showcase of professional digital marketing assets, brand designs, and campaign visuals.</p>
+        </header>
+
+        <div class="category-title">Fit Jacket (Fashion / E-Commerce)</div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="fitjacket-purple-jacket.jpg" alt="Fit Jacket Purple Collection">
+                <div class="portfolio-info">
+                    <h3>Descendants Mal Purple Jacket</h3>
+                    <p>Clean promotional visual highlighting thematic movie-inspired fashion merchandise with clear visual hierarchy.</p>
                 </div>
             </div>
-            <div class="large-badge">
-                <div class="line1">HUMAN-ONLY BRAND</div>
-                <div class="line2">ARCHITECT</div>
+            <div class="portfolio-item">
+                <img src="fitjacket-fashion-collection.png" alt="Fit Jacket Collection Banner">
+                <div class="portfolio-info">
+                    <h3>Brand Fashion Collection</h3>
+                    <p>Minimalistic and elegant social media banner emphasizing brand identity and a modern aesthetic layout.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="fitjacket-blacklist-james-spader.jpg" alt="Fit Jacket Blacklist Theme">
+                <div class="portfolio-info">
+                    <h3>The Blacklist James Spader Promo</h3>
+                    <p>High-impact thematic promotional card targeted towards pop-culture enthusiasts and tailored apparel lines.</p>
+                </div>
             </div>
         </div>
 
-        <!-- Navigation Grid (Now Fully Connected) -->
-        <div class="nav-grid">
-            <a href="pitch.html" class="nav-item">Pitch<br>Slider</a>
-            <a href="work.html" class="nav-item">My<br>Works</a>
-            <a href="scaler.html" class="nav-item">Chapter<br>Scaler</a>
-            <a href="connect.html" class="connect-btn">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                Quick Connect
-            </a>
-        </div>
-
-        <!-- Main Content Card -->
-        <div class="card">
-            <div class="badge-container">
-                <span class="badge badge-purple">100% VECTOR WORK ONLY</span>
-                <span class="badge badge-pink">NO GENERATIVE AI</span>
+        <div class="category-title">Grand Interiors (Flooring & Carpets)</div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="grand-interiors-flooring-promo.jpg" alt="Grand Interiors Promo">
+                <div class="portfolio-info">
+                    <h3>Luxury Flooring Showcase</h3>
+                    <p>A sleek corporate design highlighting premium carpet textures and interior transformation options.</p>
+                </div>
             </div>
-
-            <h2 class="main-heading">Human-Designed Visual Systems for Queer Social Global</h2>
-            
-            <p class="body-text">
-                Hi team! I am <span class="highlight-text">Nimra Khan</span>. I have mapped my 6+ years of visual design expertise, real SMM calendars, and UI setups to perfectly solve your branding needs—from Camden to Oslo. No AI shortcuts, just pure vector mathematics, strategy, and place-based identity.
-            </p>
+            <div class="portfolio-item">
+                <img src="grand-interiors-flooring-before-after.jpg" alt="Grand Interiors Before After">
+                <div class="portfolio-info">
+                    <h3>Before / After Transformation</h3>
+                    <p>A balanced split layout template displaying practical results and direct commercial value for clients.</p>
+                </div>
+            </div>
         </div>
 
+        <div class="category-title">Get Smart Gym (Fitness & Fitness Branding)</div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="getsmartgym-mothers-day-offer.jpg" alt="Get Smart Gym Mothers Day">
+                <div class="portfolio-info">
+                    <h3>Mother's Day Campaign</h3>
+                    <p>Vibrant pink fitness marketing creative designed to drive high engagement for local promotional events.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="getsmartgym-brand-banner.png" alt="Get Smart Gym Brand Banner">
+                <div class="portfolio-info">
+                    <h3>Gym Brand Banner</h3>
+                    <p>Bold typography combined with high-energy composition to represent professional fitness environments.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-title">Community & Special Events</div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="queer-games-night-sample.png" alt="Queer Games Night">
+                <div class="portfolio-info">
+                    <h3>Queer Games Night</h3>
+                    <p>A clean, premium night-event template featuring striking neon lighting styles blended with customized brand theme elements.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
