@@ -1,224 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nimra Khan • Visual Systems Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-        body {
-            background-color: #05070F;
-            color: #FFFFFF;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            padding: 24px 16px;
-        }
-        .portfolio-container {
-            width: 100%;
-            max-width: 390px; /* Mobile viewport standard */
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
-        }
-        /* Top Header Section */
-        .top-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 100%;
-        }
-        .profile-block {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-        .avatar {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #A855F7, #3B82F6);
-            border-radius: 12px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 700;
-            font-size: 1.1rem;
-            letter-spacing: -0.5px;
-            color: #FFFFFF;
-            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
-        }
-        .profile-text .name {
-            font-size: 1.25rem;
-            font-weight: 700;
-            line-height: 1.2;
-            color: #FFFFFF;
-        }
-        .profile-text .exp {
-            font-size: 0.75rem;
-            color: #9CA3AF;
-            margin-top: 4px;
-        }
-        .large-badge {
-            border: 1px solid rgba(168, 85, 247, 0.4);
-            background: rgba(168, 85, 247, 0.05);
-            border-radius: 99px;
-            padding: 8px 16px;
-            text-align: left;
-            max-width: 160px;
-        }
-        .large-badge .line1 {
-            font-size: 0.6rem;
-            font-weight: 700;
-            color: #C084FC;
-            letter-spacing: 0.5px;
-            margin-bottom: 2px;
-        }
-        .large-badge .line2 {
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: #A78BFA;
-            letter-spacing: 0.5px;
-        }
-        /* Navigation Grid */
-        .nav-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr) auto;
-            gap: 8px;
-            align-items: center;
-            width: 100%;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding-bottom: 16px;
-        }
-        .nav-item {
-            font-size: 0.8rem;
-            color: #9CA3AF;
-            text-decoration: none;
-            font-weight: 500;
-            line-height: 1.3;
-            text-align: left;
-            transition: color 0.2s;
-        }
-        .nav-item:hover {
-            color: #FFFFFF;
-        }
-        .connect-btn {
-            background-color: rgba(46, 16, 101, 0.4);
-            border: 1px solid #5B21B6;
-            color: #E9D5FF;
-            padding: 10px 14px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        /* Main Portfolio Card */
-        .card {
-            background: linear-gradient(145deg, #0F1322, #070A14);
-            border: 1px solid #1F2937;
-            border-radius: 28px;
-            width: 100%;
-            padding: 32px 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        }
-        .badge-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            margin-bottom: 24px;
-        }
-        .badge {
-            font-size: 0.68rem;
-            font-weight: 700;
-            padding: 6px 16px;
-            border-radius: 99px;
-            letter-spacing: 0.5px;
-            display: inline-block;
-        }
-        .badge-purple {
-            background-color: rgba(109, 40, 217, 0.2);
-            color: #C084FC;
-            border: 1px solid #6D28D9;
-        }
-        .badge-pink {
-            background-color: rgba(157, 23, 77, 0.2);
-            color: #F472B6;
-            border: 1px solid #9D174D;
-        }
-        .main-heading {
-            font-size: 1.75rem;
-            font-weight: 700;
-            line-height: 1.25;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
-            color: #FFFFFF;
-        }
-        .body-text {
-            font-size: 0.92rem;
-            color: #9CA3AF;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-        .highlight-text {
-            color: #C084FC;
-            font-weight: 600;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="portfolio-container">
-        
-        <!-- Top Header Block -->
-        <div class="top-header">
-            <div class="profile-block">
-                <div class="avatar">NK</div>
-                <div class="profile-text">
-                    <h1 class="name">Nimra<br>Khan</h1>
-                    <p class="exp">6+ Years Exp • Design, SMM & Scalable Systems</p>
-                </div>
-            </div>
-            <div class="large-badge">
-                <div class="line1">HUMAN-ONLY BRAND</div>
-                <div class="line2">ARCHITECT</div>
-            </div>
-        </div>
-
-        <!-- Navigation Grid -->
-        <div class="nav-grid">
-            <a href="#" class="nav-item">Pitch<br>Slider</a>
-            <a href="#" class="nav-item">My<br>Works</a>
-            <a href="#" class="nav-item">Chapter<br>Scaler</a>
-            <a href="#" class="connect-btn">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                Quick Connect
-            </a>
-        </div>
-
-        <!-- Main Content Card -->
-        <div class="card">
-            <div class="badge-container">
-                <span class="badge badge-purple">100% VECTOR WORK ONLY</span>
-                <span class="badge badge-pink">NO GENERATIVE AI</span>
-            </div>
-
-            <h2 class="main-heading">Human-Designed Visual Systems for Queer Social Global</h2>
-            
-            <p class="body-text">
-                Hi team! I am <span class="highlight-text">Nimra Khan</span>. I have mapped my 6+ years of visual design expertise, real SMM calendars, and UI setups to perfectly solve your branding needs—from Camden to Oslo. No AI shortcuts, just pure vector mathematics, strategy, and place-based identity.
-            </p>
-        </div>
-
-    </div>
-
-</body>
-</html>
+‎```html
+‎<!DOCTYPE html>
+‎<html lang="en" class="scroll-smooth">
+‎<head>
+‎    <meta charset="UTF-8">
+‎    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎    <title>Nimra Khan | Brand & Social System Architect</title>
+‎    <!-- Tailwind CSS -->
+‎    <script src="https://cdn.tailwindcss.com"></script>
+‎    <!-- Inter & Plus Jakarta Sans Fonts -->
+‎    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+‎    <!-- FontAwesome Premium Icons -->
+‎    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+‎    
+‎    <script>
+‎        tailwind.config = {
+‎            theme: {
+‎                extend: {
+‎                    fontFamily: {
+‎                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+‎                        mono: ['Inter', 'monospace'],
+‎                    },
+‎                    colors: {
+‎                        brand: {
+‎                            dark: '#030712',
+‎                            card: '#0f172a',
+‎                            accent: '#a855f7',
+‎                            glow: '#ec4899',
+‎                            success: '#10b981'
+‎                        }
+‎                    }
+‎                }
+‎            }
+‎        }
+‎    </script>
+‎    <style>
+‎        body {
+‎            font-family: 'Plus Jakarta Sans', sans-serif;
+‎            background-color: #030712;
+‎            color: #f3f4f6;
+‎        }
+‎        .rainbow-text {
+‎            background: linear-gradient(to right, #ec4899, #a855f7, #3b82f6, #10b981, #f59e0b, #ef4444);
+‎            -webkit-background-clip: text;
+‎            -webkit-text-fill-color: transparent;
+‎        }
+‎        .rainbow-bg {
+‎            background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #3b82f6 100%);
+‎        }
+‎        .glow-hover:hover {
+‎            box-shadow: 0 0 30px rgba(168, 85, 247, 0.35);
+‎        }
+‎        /* Custom scrollbar */
+‎        ::-webkit-scrollbar {
+‎            width: 8px;
+‎        }
+‎        ::-webkit-scrollbar-track {
+‎            background: #030712;
+‎        }
+‎        ::-webkit-scrollbar-thumb {
+‎            background: #1e293b;
+‎            border-radius: 4px;
+‎        }
+‎        ::-webkit-scrollbar-thumb:hover {
+‎            background: #334155;
+‎        }
+‎    </style>
+‎</head>
+‎<body class="min-h-screen selection:bg-purple-500 selection:text-white overflow-x-hidden">
+‎
+‎    <!-- Global Floating Toast Notification -->
+‎    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white border border-purple-500/30 px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+‎        <div class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></div>
+‎        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+‎        <span id="toast-message" class="text-sm font-medium">Success!</span>
+‎    </div>
+‎
+‎    <!-- Live Header Navigation -->
+‎    <header class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-slate-900/80">
+‎        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+‎            <div class="flex items-center gap-3">
+‎                <div class="h-10 w-10 rounded-xl rainbow-bg flex items-center justify-center font-black text-white shadow-lg shadow-purple-500/20">
+‎                    NK
+‎                </div>
+‎                <div>
+‎                    <h1 class="font-extrabold text-lg tracking-tight inline-flex items-center gap-2">
+‎                        Nimra Khan
+‎                        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 uppercase tracking-wider">Human-Only Brand Architect</span>
+‎                    </h1>
+‎                    <p class="text-xs text-slate-400">6+ Years Exp • Design, SMM & Scalable Systems</p>
+‎                </div>
+‎            </div>
+‎            
+‎            <nav class="flex items-center gap-1 sm:gap-4 text-xs sm:text-sm font-medium text-slate-300">
+‎                <a href="#pitch-deck" class="px-3 py-2 rounded-lg hover:bg-slate-900 hover:text-white transition-all">Pitch Slider</a>
+‎                <a href="#case-studies" class="px-3 py-2 rounded-lg hover:bg-slate-900 hover:text-white transition-all">My Works</a>
+‎                <a href="#scaling-system" class="px-3 py-2 rounded-lg hover:bg-slate-900 hover:text-white transition-all">Chapter Scaler</a>
+‎                <a href="#customize" class="px-3 py-2 rounded-lg bg-purple-600/15 text-purple-300 hover:bg-purple-600/25 transition-all border border-purple-500/20"><i class="fa-solid fa-envelope mr-1"></i> Quick Connect</a>
+‎            </nav>
+‎        </div>
+‎    </header>
+‎
+‎    <!-- Welcome Banner with Brand Identity Pitch Brief context -->
+‎    <main class="max-w-6xl mx-auto px-4 py-8 space-y-16"
